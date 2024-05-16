@@ -1,0 +1,184 @@
+:root {
+    --fontnextbold: "NEXT ART";
+    --bodywhite: rgba(253, 253, 253, 1);
+    --fontnunito: "Nunito Sans";
+    --bordradius: 5px;
+}
+
+@font-face {
+    font-family: "NEXT ART";
+    src: url(fonts/next-art/NEXT\ ART_Bold.otf);
+}
+
+body {
+    font-family: var(--fontnunito);
+}
+
+
+.head {
+    background-image: url(images/head_images/Rectangle1.png);
+    max-width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+.nav_logo { 
+display: none;
+}
+
+.header_button button{
+    color: var(--bodywhite);
+    font-family: var(--fontnunito);
+    font-weight: 600;
+    font-size: 18px;
+    background-color: rgba(26, 62, 62, 1);
+    border-radius: var(--bordradius);
+    height: 40px;
+    border: none;
+    padding-inline: 20px;
+}
+.header_nav {
+    display: flex;
+    width: 65vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header_nav a{
+    color: var(--bodywhite);
+    font-family: var(--fontnunito);
+    font-weight: 600;
+    font-size: 18px;
+}
+.head_info {
+    max-width: 1245px;
+    padding-inline: 41px;
+    margin-block: 345px 38px
+}
+.head_text{
+    max-width: max-content;
+}
+
+.head_text h1 {
+font-family: var(--fontnextbold);
+font-weight: 700;
+font-size: 50px;
+line-height: 139%;
+letter-spacing: 2px;
+color: #fdfdfd;
+}
+
+.header_forms{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px 50px;
+    border-radius: var(--bordradius);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.form_block {
+    height: 52px;
+    background: none;
+    border: 1px solid var(--bodywhite);
+    border-radius: var(--bordradius);
+    color: var(--bodywhite);
+    text-align: center;
+}
+.form_block::placeholder {
+    color: var(--bodywhite);
+}
+.form_block option {
+    color: rgba(26, 62, 62, 1);
+}
+.header_form-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+.form_item {
+    display: flex;
+    flex-direction: column;
+    color: var(--bodywhite);
+    flex: 1 1 auto;
+   
+}
+.form_item label {
+    font-size: 14px;
+    font-family: var(--fontnunito);
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.search_programm {
+    background-color: var(--bodywhite);
+    color: rgba(26, 62, 62, 1);
+    font-size: 16px;
+    font-family: var(--fontnunito);
+    width: 213px;
+    height: 52px;
+    border-radius: var(--bordradius);
+    border: 1px solid;
+}
+
+
+
+
+@media (max-width: 1100px) {
+    .header {
+        justify-content: space-between;
+    padding-inline: 41px;
+    align-items: center;
+    }
+    .head_info {
+        margin-block: 30vh 38px;
+    }
+    .nav_logo {
+        display: block;
+    }
+    .header_nav {
+        display: none;
+    }
+    .header_button button{
+        font-size: 0;
+        width: 0;
+        height: 0;
+        border: none;
+        padding: 0;
+    }
+    .header_form-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+    }
+    .form_item {
+        min-width: 287px;
+    }
+}
+@media (max-width: 773px) {
+  
+.form_item {
+    display: none;
+    
+}
+.header_forms {
+    background: none;
+    padding: 0;
+
+}
+.header_form-items {
+    justify-content: start;
+}
+    .head_text h1{
+font-size: 28px;
+    }
+}
+
