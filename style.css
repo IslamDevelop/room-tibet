@@ -91,12 +91,17 @@ color: #fdfdfd;
     border-radius: var(--bordradius);
     color: var(--bodywhite);
     text-align: center;
+    appearance: none;
 }
 .form_block::placeholder {
     color: var(--bodywhite);
 }
 .form_block option {
     color: rgba(26, 62, 62, 1);
+    
+}
+.form_block::after {
+    content: attr(ok)
 }
 .header_form-items {
     display: flex;
@@ -141,6 +146,14 @@ color: #fdfdfd;
     .head_info {
         margin-block: 30vh 38px;
     }
+    .menu_logo {
+        background-image: url(images/head_images/Vector.svg);
+        background-repeat: no-repeat;
+        width: 43px;
+        height: 40px;
+        background-position: center;
+        background-size: cover;
+    }
     .nav_logo {
         display: block;
         max-width: 250px;
@@ -171,7 +184,7 @@ color: #fdfdfd;
         animation-duration: 1s;
         transform-origin: right;
         right: 0;
-        width: 95%;
+        width: 92%;
         margin-inline: 4%;
         border-radius: 6px;
         top: 10px;
