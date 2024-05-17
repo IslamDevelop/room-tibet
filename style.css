@@ -46,7 +46,7 @@ display: none;
 }
 .header_nav {
     display: flex;
-    width: 65vw;
+    gap: 45px;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -56,6 +56,8 @@ display: none;
     font-weight: 600;
     font-size: 18px;
 }
+
+
 .head_info {
     max-width: 1245px;
     padding-inline: 41px;
@@ -141,7 +143,50 @@ color: #fdfdfd;
     }
     .nav_logo {
         display: block;
+        max-width: 250px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 15px;
+        color: rgb(247, 247, 247);
+        cursor: pointer;
     }
+     .menu_nav {
+        list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(26, 62, 62, 1);
+  display: none;
+     }
+     .menu_nav a{
+        color: var(--bodywhite);
+        font-family: var(--fontnunito);
+        font-size: 18px;
+        font-weight: 600;
+     }
+     
+     .visible {
+        position: absolute;
+        display: block;
+        animation-name: menulist;
+        animation-duration: 1s;
+        transform-origin: right;
+        right: 0;
+        width: 95%;
+        margin-inline: 4%;
+        border-radius: 6px;
+        top: 10px;
+     }
+     @keyframes menulist {
+        0%  {
+          transform: scaleX(0);
+         
+        }
+        100% {
+          transform: scaleX(1);
+          
+        }
+
+      }
     .header_nav {
         display: none;
     }
