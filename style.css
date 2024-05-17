@@ -182,7 +182,7 @@ font-size: 28px;
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 441px) {
     .head_text h1{
         font-size: 20px;
             }
