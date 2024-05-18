@@ -320,7 +320,7 @@ font-size: 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    padding-top: 5px;
 }
 }
 @media (max-width: 441px) {
