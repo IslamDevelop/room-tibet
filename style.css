@@ -147,8 +147,9 @@ color: #fdfdfd;
     display: flex;
     justify-content: center;
     gap: 40px;
-    padding-top: 50px;
+    padding-block: 50px;
     padding-inline: 20px;
+    height: 60vh;
 }
 
 .tour_programm-content {
@@ -195,7 +196,69 @@ top: 23%;
     padding-block: 30px;
 }
 
+.best_programm {
+    display: flex;
+    justify-content: center;
+    padding-inline: 20px;
+    gap: 60px;
+    background-color: rgba(243, 245, 244, 1);
+    padding-block: 40px;
+}
+.best_programm-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 580px;
+}
+.best_programm-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.best_programm-items > div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.best_programm-items > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.programm-item1::before {
+    content: url(images/head_images/item1.svg);
+    position: static;
+}
+.programm-item2::before {
+    content: url(images/head_images/item2.svg);
+}
+.programm-item3::before {
+    content: url(images/head_images/item3.svg);
+}
+.middle_text {
+    font-size: 18px;
+    font-family: var(--fontnunito);
+    color: var(--blacktext);
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1.2%;
+}
 
+.easy_text {
+    font-size: 14px;
+    font-family: var(--fontnunito);
+    color: var(--blacktext);
+    font-weight: 400;
+    line-height: 20px;
+   
+}
+
+.best_programm-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    align-content: center;
+}
 
 @media (max-width: 1100px) {
     .header {
@@ -280,6 +343,9 @@ top: 23%;
     .form_item {
         min-width: 287px;
     }
+    .tour_programm {
+        height: max-content;
+    }
 
     .programm-content_image {
         display: none;
@@ -296,6 +362,13 @@ top: 23%;
     }
     .content_text {
         padding-block: 0px;
+    }
+    .best_programm-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .best_programm-content img {
+        width: 150px;
     }
 }
 @media (max-width: 773px) {
@@ -320,8 +393,11 @@ font-size: 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
-    gap: 20pxg;
+    padding-block: 20px;
+    gap: 20px;
+}
+.best_programm-content {
+    display: none;
 }
 }
 @media (max-width: 441px) {
