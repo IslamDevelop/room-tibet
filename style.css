@@ -3,6 +3,9 @@
     --bodywhite: rgba(253, 253, 253, 1);
     --fontnunito: "Nunito Sans";
     --bordradius: 5px;
+    --darkgreen: rgba(26, 62, 62, 1);
+    --yellow: rgba(242, 190, 34, 1);
+    --blacktext: rgba(24, 18, 30, 1);
 }
 
 @font-face {
@@ -33,7 +36,7 @@ body {
 display: none;
 }
 
-.header_button button{
+.header_button{
     color: var(--bodywhite);
     font-family: var(--fontnunito);
     font-weight: 600;
@@ -91,7 +94,7 @@ color: #fdfdfd;
     border-radius: var(--bordradius);
     color: var(--bodywhite);
     text-align: center;
-    appearance: none;
+   
 }
 .form_block::placeholder {
     color: var(--bodywhite);
@@ -100,9 +103,8 @@ color: #fdfdfd;
     color: rgba(26, 62, 62, 1);
     
 }
-.form_block::after {
-    content: attr(ok)
-}
+
+
 .header_form-items {
     display: flex;
     justify-content: center;
@@ -115,6 +117,11 @@ color: #fdfdfd;
     color: var(--bodywhite);
     flex: 1 1 auto;
    
+}
+/* .form_item::after {
+    position: absolute;
+    content: url(images/ep_arrow-down.svg); */
+
 }
 .form_item label {
     font-size: 14px;
@@ -134,6 +141,59 @@ color: #fdfdfd;
     border: 1px solid;
 }
 
+/* Next page */
+
+.tour_programm {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 50px;
+    padding-inline: 20px;
+}
+
+.tour_programm-content {
+    position: relative;
+    width: 580px;
+}
+
+.programm-content_video {
+position: absolute;
+top: 23%;
+    left: 25%;
+}
+.tour_programm-text {
+    width: 580px;
+    height: 398px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-block: 36px;
+    justify-content: space-evenly;
+}
+
+.yellow_text {
+    font-size: 24px;
+    font-family: var(--fontnunito);
+    color: var(--yellow);
+    font-weight: 400;
+    line-height: 20px;
+}
+.grand_text {
+    font-size: 32px;
+    font-family: var(--fontnunito);
+    color: var(--blacktext);
+    font-weight: 800;
+    line-height: 38px;
+}
+
+.content_text {
+    font-size: 18px;
+    font-family: var(--fontnunito);
+    color: var(--blacktext);
+    font-weight: 400;
+    line-height: 27px;
+    padding-block: 30px;
+}
 
 
 
@@ -220,6 +280,23 @@ color: #fdfdfd;
     .form_item {
         min-width: 287px;
     }
+
+    .programm-content_image {
+        display: none;
+    }
+    .programm-content_video {
+        position: static;
+    }
+    .tour_programm-content {
+        width: max-content;
+    }
+    .tour_programm-text {
+        padding-block: 0px;
+        width: 100%;
+    }
+    .content_text {
+        padding-block: 0px;
+    }
 }
 @media (max-width: 773px) {
   
@@ -238,10 +315,27 @@ color: #fdfdfd;
     .head_text h1{
 font-size: 28px;
     }
-}
 
+.tour_programm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+}
 @media (max-width: 441px) {
     .head_text h1{
         font-size: 20px;
-            }
+    }
+
+.yellow_text {
+    font-size: 16px;
+}
+.grand_text {
+    font-size: 24px;
+}
+
+.content_text {
+    font-size: 16px;
+}
 }
