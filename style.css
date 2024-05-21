@@ -149,7 +149,6 @@ color: #fdfdfd;
     gap: 40px;
     padding-block: 50px;
     padding-inline: 20px;
-    height: 60vh;
 }
 
 .tour_programm-content {
@@ -159,7 +158,7 @@ color: #fdfdfd;
 
 .programm-content_video {
 position: absolute;
-top: 23%;
+top: 16%;
     left: 25%;
 }
 .tour_programm-text {
@@ -258,6 +257,126 @@ top: 23%;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
     align-content: center;
+}
+
+/* popular_section */
+
+.scroll {
+    width: 90%;
+    height: 520px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+
+.programm_popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.popular_content {
+    overflow-y: hidden;
+    display: flex;
+    gap: 30px;
+   
+}
+
+.popular_head {
+    padding-block: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popular_item1 {
+    background-image: url(images/popular_background1.png);
+    min-width: 370px;
+    height: 500px;
+    position: relative;
+    border-radius: 10%
+    
+}
+
+.popular_item2 {
+    background-image: url(images/popular_background2.png);
+    min-width: 370px;
+    height: 500px;
+    position: relative;
+    border-radius: 10%
+
+}
+
+.popular_item3 {
+    background-image: url(images/popular_background3.png);
+    min-width: 370px;
+    height: 500px;
+    position: relative;
+    border-radius: 10%
+
+}
+
+.stars {
+    display: flex;
+    position: absolute;
+    background-color: rgba(253, 253, 253, 0.4);
+    height: max-content;
+    padding: 5px;
+    gap: 5px;
+    top: 10%;
+    right: 0%;
+}
+.stars p {
+    padding: 0;
+}
+
+.pop_slide-head {
+    display: flex;
+    padding: 30px 20px;
+    justify-content: space-around;
+}
+
+.slide-head_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slide-head_price {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+}
+.white {
+    color: var(--bodywhite);
+    padding: 0px;
+}
+
+.popular_slide {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    position: absolute;
+    top: 78%;
+    transition: 2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    border-radius: 10%;
+    z-index: 5;
+}
+.popular_slide:hover {
+  transform: translateY(-78%);
+
+}
+
+.pop_slide-main {
+    padding-inline: 20px;
 }
 
 @media (max-width: 1100px) {
@@ -414,5 +533,11 @@ font-size: 28px;
 
 .content_text {
     font-size: 16px;
+}
+
+.popular_card > div {
+    min-width: 300px;
+    height: 420px;
+
 }
 }
