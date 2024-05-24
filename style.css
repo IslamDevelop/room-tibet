@@ -31,6 +31,7 @@ body {
 .header {
     display: flex;
     justify-content: space-around;
+    padding-top: 20px;
 }
 .nav_logo { 
 display: none;
@@ -122,7 +123,7 @@ color: #fdfdfd;
     position: absolute;
     content: url(images/ep_arrow-down.svg); */
 
-}
+
 .form_item label {
     font-size: 14px;
     font-family: var(--fontnunito);
@@ -379,6 +380,72 @@ top: 16%;
     padding-inline: 20px;
 }
 
+.popular_button {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+/* journey_programm */
+
+.journey_programm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(243, 245, 244, 1);
+    padding: 40px;
+    gap: 30px;
+}
+
+.journey_cards {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 20px;
+}
+
+.article {
+    display: flex;
+    max-width: 580px;
+    max-height: 312px;
+    gap: 20px;
+    background-color: var(--bodywhite);
+    padding: 10px;
+    border-radius: var(--bordradius);
+    box-shadow: 0px 1px 7px black;
+}
+
+.article_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.article_text h2 {
+    font-size: 24px;
+    font-family: var(--fontnunito);
+    color: var(--blacktext);
+    font-weight: 700;
+    line-height: 32px;
+}
+
+
+.article_text div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article_text h3 {
+    color: var(--yellow);
+}
+
+.journey_head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 @media (max-width: 1100px) {
     .header {
         justify-content: space-between;
@@ -477,8 +544,11 @@ top: 16%;
     }
     .tour_programm-text {
         padding-block: 0px;
-        width: 100%;
+    width: 100%;
+    height: max-content;
+    gap: 15px;
     }
+
     .content_text {
         padding-block: 0px;
     }
@@ -487,11 +557,30 @@ top: 16%;
         grid-template-columns: 1fr;
     }
     .best_programm-content img {
-        width: 150px;
+        width: 105px;
+    }
+
+    .journey_cards {
+        display: grid;
+        grid-template-columns: 1fr;
+       
+    }
+
+    .article {
+       max-width: 100%;
     }
 }
 @media (max-width: 773px) {
   
+.header img {
+    width: 60px;
+}
+
+.menu_logo {
+    height: 20px;
+    width: 20px;
+}
+
 .form_item {
     display: none;
     
@@ -518,12 +607,37 @@ font-size: 28px;
 .best_programm-content {
     display: none;
 }
+
+.journey_content {
+    width: 100%;
+    overflow-x: hidden;
+}
+.journey_cards {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow: scroll;
+}
+.article {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+.article_text {
+    display: flex;
+    flex-direction: column;
+    height: 225px;
+    justify-content: space-between;
+}
 }
 @media (max-width: 441px) {
     .head_text h1{
         font-size: 20px;
     }
 
+    .programm-content_video img {
+        width: 320px;
+    }
 .yellow_text {
     font-size: 16px;
 }
@@ -539,5 +653,9 @@ font-size: 28px;
     min-width: 300px;
     height: 420px;
 
+}
+
+.scroll {
+    height: 435px;
 }
 }
