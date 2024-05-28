@@ -48,6 +48,12 @@ display: none;
     border: none;
     padding-inline: 20px;
 }
+
+.header_button:hover {
+    background-color: var(--bodywhite);
+    border: 1px solid black;
+    color: var(--darkgreen);
+}
 .header_nav {
     display: flex;
     gap: 45px;
@@ -136,10 +142,16 @@ color: #fdfdfd;
     color: rgba(26, 62, 62, 1);
     font-size: 16px;
     font-family: var(--fontnunito);
+    font-weight: bold;
     width: 213px;
     height: 52px;
     border-radius: var(--bordradius);
     border: 1px solid;
+}
+
+.search_programm:hover {
+    background-color: var(--darkgreen);
+    color: var(--bodywhite);
 }
 
 /* Next page */
@@ -446,6 +458,61 @@ top: 16%;
     gap: 10px;
 }
 
+/* images_section */
+.images {
+    padding-top: 40px;
+    padding-bottom: 200px;
+}
+
+.images_body {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.images_content {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    width: max-content;
+    justify-items: center;
+    gap: 10px;
+}
+
+.images_content div:nth-child(1) {
+    grid-column: 1 / 3;
+}
+.images_content div:nth-child(5) {
+    grid-column: 2 / 4;
+}
+.images_content > div img{
+    height: 100%;
+    width: 100%;
+}
+.images_content div {
+background-image: url(images/search.svg);
+}
+.images_content > div:hover {
+    filter: contrast(60.2%);
+
+}
+
+.images_button {
+    display: flex;
+    justify-content: center;
+}
+
+/* footer  */
+
+
+footer {
+    width: 100%;
+    height: 587px;
+    background-color: var(--darkgreen);
+}
+
+
 @media (max-width: 1100px) {
     .header {
         justify-content: space-between;
@@ -629,6 +696,21 @@ font-size: 28px;
     height: 225px;
     justify-content: space-between;
 }
+.images_body {
+    overflow-x: scroll;
+    display: flex;
+    justify-content: flex-start;
+}
+.images_content > div img {
+    height: 100%;
+    width: 280px;
+}
+
+.images_content {
+    display: flex;  
+    gap: 10px;   
+}
+
 }
 @media (max-width: 441px) {
     .head_text h1{
@@ -657,5 +739,9 @@ font-size: 28px;
 
 .scroll {
     height: 435px;
+}
+.images_content > div img {
+    height: 100%;
+    width: 196px;
 }
 }
