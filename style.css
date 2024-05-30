@@ -40,13 +40,14 @@ display: none;
 .header_button{
     color: var(--bodywhite);
     font-family: var(--fontnunito);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
     background-color: rgba(26, 62, 62, 1);
     border-radius: var(--bordradius);
     height: 40px;
     border: none;
     padding-inline: 20px;
+    text-wrap: nowrap;
 }
 
 .header_button:hover {
@@ -461,7 +462,7 @@ top: 16%;
 /* images_section */
 .images {
     padding-top: 40px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
 }
 
 .images_body {
@@ -504,14 +505,154 @@ background-image: url(images/search.svg);
 }
 
 /* footer  */
+.h2size {
+    font-size: 24px;
+    font-family: var(--fontnunito);
+    color: var(--bodywhite);
+    font-weight: 700;
+    line-height: 32px;
+}
 
+.footer_block-position {
+    position: absolute;
+    top: -20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_block {
+    background-color: var(--bodywhite);
+    border-radius: var(--bordradius);
+    top: -15%;
+    position: absolute;
+    padding-block: 40px;
+    max-width: 1180px;
+    box-shadow: 1px 1px 11px gray;
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 20px;
+    gap: 15px;
+    margin-inline: 15px;
+}
+
+
+.footer_form div {
+    display: flex;
+    gap:15px
+}
+.footer_form {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer_form legend {
+    font-family: var(--fontnunito);
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+.footer_form input::placeholder {
+    font-size: 14px;
+    font-family: var(--fontnunito);
+    padding-left: 5px;
+}
+
+.footer_block-text {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer_block input {
+    background-color: rgba(243, 245, 244, 1);
+    border-radius: var(--bordradius);
+    border: none;
+    width: 280px;
+    height: 40px;
+}
 
 footer {
     width: 100%;
     height: 587px;
     background-color: var(--darkgreen);
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
+.footer_content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 100px;
+    padding-inline: 15px;
+}
+
+.contacts {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+}
+
+.contacts_top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: underline;
+}
+
+footer a {
+    text-decoration: underline;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: var(--fontnunito);
+}
+footer a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+
+.contacts_info {
+    display: flex;
+    gap: 20px;
+}
+
+.contacts_logo {
+    display: flex;
+    gap: 20px;
+}
+
+footer li a{
+text-decoration: none;
+font-weight: 400;
+}
+
+footer li::before {
+    content: url(images/arrow_footer.svg);
+    padding-right: 5px;
+}
+footer ul {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 @media (max-width: 1100px) {
     .header {
@@ -636,6 +777,14 @@ footer {
     .article {
        max-width: 100%;
     }
+    .footer_block input {
+        max-width: 280px;
+        width: 100%;
+    }
+    .footer_content {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 @media (max-width: 773px) {
   
@@ -710,6 +859,22 @@ font-size: 28px;
     display: flex;  
     gap: 10px;   
 }
+.images {
+    padding-bottom: 200px;
+}
+footer {
+    height: max-content;
+}
+.footer_block {
+    flex-direction: column;
+}
+.footer_block-text {
+    max-width: max-content;
+}
+.footer_content {
+    padding-top: 230px;
+    padding-bottom: 30px;
+}
 
 }
 @media (max-width: 441px) {
@@ -743,5 +908,17 @@ font-size: 28px;
 .images_content > div img {
     height: 100%;
     width: 196px;
+}
+.contacts {
+    padding-top: 30px;
+}
+.footer_form div {
+flex-direction: column;
+}
+.footer_content {
+    padding-top: 280px 
+}
+.footer_block input {
+    max-width: 100%;
 }
 }
