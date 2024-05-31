@@ -178,6 +178,7 @@ top: 16%;
 video {
     width: 350px;
     border-radius: 15px;
+    height: 420px;
 }
 .programm-content_video img {
     position: absolute;
