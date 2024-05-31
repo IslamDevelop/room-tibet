@@ -175,6 +175,15 @@ position: absolute;
 top: 16%;
     left: 25%;
 }
+video {
+    width: 350px;
+    border-radius: 15px;
+}
+.programm-content_video img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
 .tour_programm-text {
     width: 580px;
     height: 398px;
